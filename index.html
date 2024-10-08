@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Welcome Screen -->
+        <div id="welcomeScreen">
+            <h1>Welcome to the Multiplication Quiz!</h1>
+            <p>Instructions:</p>
+            <ul>
+                <li>Answer the questions that appear on the screen.</li>
+                <li>For each correct answer, you’ll earn points!</li>
+                <li>After 10 questions, you’ll move to the next level.</li>
+            </ul>
+            <button onclick="startQuiz()">Start Quiz</button>
+        </div>
+
+        <!-- Quiz Section -->
+        <div id="quiz" style="display: none;">
+            <h1>Multiplication Quiz</h1>
+            <p id="question"></p>
+            <input type="number" id="answer" placeholder="Enter your answer here">
+            <button onclick="submitAnswer()">Submit</button>
+            <div id="feedback"></div>
+            <div id="score">
+                <p>Score: <span id="scoreValue">0</span></p>
+                <p>Attempts: <span id="attemptsValue">0</span></p>
+                <p>Level: <span id="levelValue">1</span></p> <!-- Level display -->
+            </div>
+            <button onclick="restartQuiz()">Restart Quiz</button>
+        </div>
+
+        <!-- Audio elements for sound effects -->
+        <audio id="correctSound" src="https://www.dropbox.com/scl/fi/h768goulde16rbsle3oi5/correct.mp3?rlkey=w48b15g82d0sq022m8weoh97h&st=hbu8ki4p&raw=1"></audio>
+        <audio id="wrongSound" src="https://www.dropbox.com/scl/fi/nbdz0m11ndxa99z9cm90s/wrong.mp3?rlkey=tu6viid9mp156z42u4lq52k70&st=dbhgu6yk&raw=1"></audio>
+        <audio id="confettiSound" src="https://www.dropbox.com/scl/fi/e0ow0iclniurfbtl6ogka/confetti-sound.mp3?rlkey=z0gbgct2myn89gvoiusry1bd7&st=d1jw6hdf&raw=1"></audio> <!-- Confetti Sound -->
+    
+        <!-- Confetti Library -->
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
